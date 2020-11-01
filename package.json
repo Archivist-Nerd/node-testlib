@@ -1,0 +1,34 @@
+{
+  "name":         "@archivistnerd/testlib",
+  "version":      "0.1.0",
+  "description":  "Archivist Nerd's testlib Package",
+  "copy":         "Copyright (c) 2020 Archivist-Nerd",
+  "main":         "testlib.js",
+  "scripts": {
+    "example":      "node tests/test.js",
+    "test"   :      "node tests/test.js",
+    "pack"   :      "npm pack",
+    "pub"    :      "npm publish --access=public"
+  },
+  "keywords": [
+    "Archivist",
+    "Nerd",
+    "testlib",
+    "testing"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Archivist-Nerd/node-testlib/blob/main/README.md",
+  "bugs": {
+    "url": "https://github.com/Archivist-Nerd/node-testlib/issues"
+  },
+  "repository": {
+    "url": "https://github.com/Archivist-Nerd/node-testlib.git",
+    "type": "git"
+  },
+  "author": {
+    "name": "Archivist Nerd",
+    "email": "a.Nerd.Archivist@gmail.com",
+    "url": "https://github.com/Archivist-Nerd"
+  },
+  "license":      "MIT"
+}
