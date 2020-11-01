@@ -7,12 +7,19 @@
  */
 require('../.')
         /**
-         * @test:attempt      tests testlib.add
+         * @test:attempt      testlib.add
          */
         .add(
           'testlib.add( name, testFn, resultTestFn)',
           ()      => ({ works: true }),
           (result)=> (result.works==true)
+        )
+        /**
+         * @test:attempt      returns true so no need for resultTestFn
+         */
+        .add(
+          'testlib.add( name, testFn )',
+          ()      => true
         )
 
         .exec();

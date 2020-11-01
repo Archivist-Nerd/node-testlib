@@ -30,7 +30,7 @@ let TestLib = {
  *                  (result) => (result.works==true)
  *              );
  */
-TestLib.add = ( name, testFn=()=>false, resultTestFn=()=>false) => {
+TestLib.add = ( name, testFn=()=>false, resultTestFn) => {
   if (typeof name == undefined) return false
   TestLib.tests.push({
     name,
@@ -51,15 +51,15 @@ TestLib.exec = () => {
 
   TestLib.tests.every( test=>{
     let result  = test.testFn()
-      , success = test.resultTestFn( result )
+      , success = (typeof test.resultTestFn != 'function')? result:test.resultTestFn( result )
       ;
     test.success = success? 'success ':'fail     '
-    console.log( `${success? 'success ':'fail     '}\t${test.name}` )
+    console.log( `${test.success}\t${test.name}` )
     return success
   })
   return TestLib
 }
 /**
- *     export bargs variable
+ *     module export
  */
 module.exports = TestLib;

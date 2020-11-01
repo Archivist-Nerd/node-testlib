@@ -1,6 +1,6 @@
 {
   "name":         "@archivistnerd/testlib",
-  "version":      "0.1.0",
+  "version":      "0.1.1",
   "description":  "Archivist Nerd's testlib Package",
   "copy":         "Copyright (c) 2020 Archivist-Nerd",
   "main":         "testlib.js",

@@ -11,6 +11,28 @@ Archivist nerd's testlib: A bare minimum node test suite
 npm install -g @archivistnerd/testlib
 ```
 
+## Example
+
+```javascript
+require('@archivistnerd/testlib')
+        /**
+         * @test:attempt      testlib.add
+         */
+        .add(
+          'testlib.add( name, testFn, resultTestFn)',
+          ()      => ({ works: true }),
+          (result)=> (result.works==true)
+        )
+        /**
+         * @test:attempt      returns true so no need for resultTestFn
+         */
+        .add(
+          'testlib.add( name, testFn )',
+          ()      => true
+        )
+
+        .exec();
+```
 
 ## License
 
