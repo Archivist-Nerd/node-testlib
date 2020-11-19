@@ -11,7 +11,30 @@ Archivist nerd's testlib: A bare minimum node test suite
 npm install -g @archivistnerd/testlib
 ```
 
-## Example
+## describe/it Example
+
+```javascript
+let describe = require('@archivistnerd/testlib').describe;
+
+describe( 'test (describe, it)', it=>{
+  it('test-description', ()=>{
+    return true
+  })
+
+  it('test-description 2', ()=>{
+    return true
+  })
+
+  it('test-fail', ()=>{
+    return false
+  })
+
+  it('test-fail (no return value)', ()=>{
+  })
+});
+```
+
+## add/exec Example
 
 ```javascript
 require('@archivistnerd/testlib')
